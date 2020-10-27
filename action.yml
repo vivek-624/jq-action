@@ -9,8 +9,8 @@ outputs:
     description: 'What jq is outputs'
 runs:
   using: 'docker'
-  #image: 'Dockerfile'
-  image: "docker://delmendo/yq-action:latest"
+  image: 'Dockerfile'
+#   image: "docker://delmendo/yq-action:latest"
   args:
     - ${{ inputs.cmd }}
     - ${{ inputs.working_directory }}
