@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-echo "::set-output name=value::$($INPUT_CMD)"
+echo "::set-output name=value::$(eval $INPUT_CMD)"
