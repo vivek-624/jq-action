@@ -1,8 +1,11 @@
-name: 'JQ Action'
-description: 'This action makes it easy to run jq as an action'
+name: 'Run jq'
+description: 'Run jq on your data and get result as output'
+branding:
+  icon: 'crosshair'
+  color: 'blue'
 inputs:
   cmd:
-    description: 'The command that should be run'
+    description: 'jq command with arguments'
     required: true
 outputs:
   value:
