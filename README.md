@@ -29,7 +29,7 @@ jobs:
     steps:
     
       - name: Extract version from package.json
-        uses: sergeysova@jq-action@v1
+        uses: sergeysova@jq-action@v2
         id: version
         with:
           cmd: 'jq .version package.json -r'
