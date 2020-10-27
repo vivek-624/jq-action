@@ -1,6 +1,6 @@
-# JQ Action
+# Run jq
 
-This lets you run jq commands
+Run jq on your data and get result as output
 
 
 ## Inputs
