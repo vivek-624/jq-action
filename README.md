@@ -15,7 +15,7 @@ This is the actual result of the command executing
 ## Example usage
 
 ```yaml
-uses: sergeysova/jq-action@master
+uses: sergeysova/jq-action@v2
 with:
   cmd: jq -n env
 ```
