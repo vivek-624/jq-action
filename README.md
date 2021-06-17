@@ -15,7 +15,7 @@ This is the actual result of the command executing
 ## Example usage
 
 ```yaml
-uses: r26d/jq-action@master
+uses: sergeysova/jq-action@master
 with:
   cmd: jq -n env
 ```
@@ -29,7 +29,7 @@ jobs:
     steps:
     
       - name: Extract version from package.json
-        uses: sergeysova@jq-action@v2
+        uses: sergeysova/jq-action@v2
         id: version
         with:
           cmd: 'jq .version package.json -r'
