@@ -10,11 +10,10 @@ Run jq on your data and get result as output
 ### `multiline`
 Optional. Default `false`.
 
-If `multiline: true`, multiple lines of output will be captured. Useful
-for capturing lists.
-
-If `multiline: false`, only the first line of the output will be
-captured. The rest will be written to stdout.
+| Value | Behavior |
+| - | - |
+| true | Multiple lines of output will be captured. Useful for capturing lists. |
+| false | Only the first line of the output will be captured. The rest will be written to stdout. |
 
 ## Outputs
 
@@ -68,5 +67,4 @@ jobs:
           for keyword in $keywords; do
             echo "$keyword"
           done
-
 ```
