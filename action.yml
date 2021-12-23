@@ -7,6 +7,11 @@ inputs:
   cmd:
     description: 'jq command with arguments'
     required: true
+  multiline:
+    description: 'If true, support multiline output'
+    required: false
+    type: boolean
+    default: false
 outputs:
   value:
     description: 'What jq is outputs'
