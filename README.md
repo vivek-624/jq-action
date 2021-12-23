@@ -7,6 +7,15 @@ Run jq on your data and get result as output
 ### `cmd`
 **Required** This is the actual command that will be passed along
 
+### `multiline`
+Optional. Default `false`.
+
+If `multiline: true`, multiple lines of output will be captured. Useful
+for capturing lists.
+
+If `multiline: false`, only the first line of the output will be
+captured. The rest will be written to stdout.
+
 ## Outputs
 
 ### `value`
@@ -36,4 +45,28 @@ jobs:
       
       - name: Show my version
         run: 'echo "version ${{ steps.version.outputs.value }}"'
+```
+
+## Using multiline output
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Extract all keywords from package.json
+        uses: sergeysova/jq-action@v2
+        id: keywords
+        with:
+          cmd: 'jq .keywords[] package.json -r'
+          multiline: true
+      
+      - name: Show keywords
+        run: |
+          keywords="${{ steps.keywords.outputs.value }}"
+          for keyword in $keywords; do
+            echo "$keyword"
+          done
+
 ```
