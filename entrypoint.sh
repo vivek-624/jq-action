@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-OUTPUT=$(eval $INPUT_CMD)
+OUTPUT=$(eval "$INPUT_CMD")
 
 # Multiline string handling, per Github Community recommendation:
 # https://github.community/t/set-output-truncates-multiline-strings/16852/3
