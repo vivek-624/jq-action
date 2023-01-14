@@ -11,4 +11,4 @@ if ($INPUT_MULTILINE); then
   OUTPUT="${OUTPUT//$'\r'/'%0D'}"
 fi
 
-echo "::set-output name=value::$OUTPUT"
+echo "value=$OUTPUT" >> $GITHUB_OUTPUT
